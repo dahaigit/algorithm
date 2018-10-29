@@ -1,7 +1,7 @@
 <?php
 /*
- * 运算符
- * http://us3.php.net/manual/zh/language.operators.php
+* 运算符
+* http://us3.php.net/manual/zh/language.operators.php
  *
  * */
 
