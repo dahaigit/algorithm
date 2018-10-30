@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf67d670-78a3-4e6f-b23a-9180765b5553" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designPatterns/0_IOC/register_tree.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php" afterPath="$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +27,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IOC_Container.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IOC_Container.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="117" column="10" lean-forward="false" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
+            <state relative-caret-position="130">
+              <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -59,6 +68,7 @@
         <option value="$PROJECT_DIR$/designPatterns/1_singleton/People.php" />
         <option value="$PROJECT_DIR$/designPatterns/0_IOC/register_tree.php" />
         <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php" />
       </list>
     </option>
   </component>
@@ -164,12 +174,12 @@
       <workItem from="1540534163785" duration="1111000" />
       <workItem from="1540538389864" duration="3832000" />
       <workItem from="1540776648161" duration="18216000" />
-      <workItem from="1540880605394" duration="14999000" />
+      <workItem from="1540880605394" duration="15116000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44918000" />
+    <option name="totallyTimeSpent" value="45035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="645" y="104" width="1673" height="1034" extended-state="0" />
@@ -544,8 +554,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="117" column="10" lean-forward="false" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
+        <state relative-caret-position="130">
+          <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding />
         </state>
       </provider>

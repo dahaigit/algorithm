@@ -43,7 +43,7 @@ class Container
      */
     public function make($abstract, $parameters=[])
     {
-        // call_user_func_array 执行回调函数
+        //  调用回调函数，并把一个数组参数作为回调函数的参数
         $this->bindings[$abstract] or die('未发现：' . $abstract);
         return call_user_func_array($this->bindings[$abstract], $parameters);
     }
