@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf67d670-78a3-4e6f-b23a-9180765b5553" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designPatterns/6_adapter/Usb.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php" afterPath="$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,14 +15,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="814">
+              <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding>
-                <element signature="e#6#53#0#PHP" expanded="true" />
+                <element signature="e#6#182#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Usb.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/designPatterns/6_adapter/Usb.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-842">
+              <caret line="6" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MySystemFactory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/designPatterns/2_factory/MySystemFactory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractFactory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/designPatterns/3_abstract_factory/AbstractFactory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -30,14 +60,16 @@
       <file leaf-file-name="IOC_Container.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="580">
+              <caret line="121" column="22" lean-forward="false" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
+              <folding>
+                <element signature="e#6#53#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
@@ -67,8 +99,9 @@
         <option value="$PROJECT_DIR$/designPatterns/4_builder/Product.php" />
         <option value="$PROJECT_DIR$/designPatterns/1_singleton/People.php" />
         <option value="$PROJECT_DIR$/designPatterns/0_IOC/register_tree.php" />
-        <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php" />
+        <option value="$PROJECT_DIR$/designPatterns/6_adapter/Usb.php" />
+        <option value="$PROJECT_DIR$/test.php" />
       </list>
     </option>
   </component>
@@ -80,8 +113,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="645" />
-    <option name="y" value="104" />
+    <option name="x" value="822" />
+    <option name="y" value="136" />
     <option name="width" value="1673" />
     <option name="height" value="1034" />
   </component>
@@ -118,7 +151,19 @@
               <item name="php360" type="b2602c69:ProjectViewProjectNode" />
               <item name="php360" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="designPatterns" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="0_IOC" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="2_factory" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="php360" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php360" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="designPatterns" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="3_abstract_factory" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="php360" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php360" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="designPatterns" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="6_adapter" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -134,11 +179,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\php\project\mhl\php360\designPatterns\6_adapter" />
       <recent name="D:\php\project\mhl\php360\designPatterns\0_IOC" />
       <recent name="D:\php\project\mhl\php360\designPatterns\5_Prototye" />
       <recent name="D:\php\project\mhl\php360\designPatterns\4_builder" />
       <recent name="D:\php\project\mhl\php360\designPatterns\3_abstract_factory" />
-      <recent name="D:\php\project\mhl\php360\designPatterns\2_factory" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\php\project\mhl\php360" />
@@ -174,15 +219,15 @@
       <workItem from="1540534163785" duration="1111000" />
       <workItem from="1540538389864" duration="3832000" />
       <workItem from="1540776648161" duration="18216000" />
-      <workItem from="1540880605394" duration="15116000" />
+      <workItem from="1540880605394" duration="22354000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45035000" />
+    <option name="totallyTimeSpent" value="52273000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="645" y="104" width="1673" height="1034" extended-state="0" />
+    <frame x="822" y="136" width="1673" height="1034" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12709238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -222,7 +267,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6#53#0#PHP" expanded="true" />
+            <element signature="e#6#182#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -306,7 +351,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6#53#0#PHP" expanded="true" />
+            <element signature="e#6#182#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -332,7 +377,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6#53#0#PHP" expanded="true" />
+            <element signature="e#6#182#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -342,7 +387,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6#53#0#PHP" expanded="true" />
+            <element signature="e#6#182#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -352,7 +397,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6#53#0#PHP" expanded="true" />
+            <element signature="e#6#182#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -362,7 +407,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6#53#0#PHP" expanded="true" />
+            <element signature="e#6#182#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -480,24 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/2_factory/MySystemFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#157#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/3_abstract_factory/AbstractFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/designPatterns/4_builder/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="814">
@@ -513,7 +540,7 @@
         <state relative-caret-position="310">
           <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
-            <element signature="e#6#142#0#PHP" expanded="true" />
+            <element signature="e#6#142#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -542,29 +569,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="121" column="22" lean-forward="false" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
           <folding>
             <element signature="e#6#53#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/2_factory/MySystemFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+        <state relative-caret-position="342">
+          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/designPatterns/3_abstract_factory/AbstractFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="360">
+          <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designPatterns/6_adapter/Usb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-842">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#182#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
