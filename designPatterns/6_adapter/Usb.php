@@ -2,7 +2,8 @@
 /*
  *
  * adapter 结构设计模式 - 适配器模式
- * 1、target 目表，需要规范的接口
+ * 问题：电脑usb可以给手机，电脑，不同品牌都可以充电，代码如何实现
+ * 1、target 目标，需要规范的接口
  * 2、adapter 适配器，其实是最终使用的类比如UsbAdapter
  * 3、adaptee 受改造者，需要适配的类，比如xiaomi类，huawei类
  * 4、使用UsbAdapter创建对象，然后使用指定方法
