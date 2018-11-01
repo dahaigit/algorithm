@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf67d670-78a3-4e6f-b23a-9180765b5553" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/1_singleton/FactorySingleton.php" afterPath="$PROJECT_DIR$/designPatterns/01_singleton/FactorySingleton.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/1_singleton/People.php" afterPath="$PROJECT_DIR$/designPatterns/01_singleton/People.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/2_factory/MySystemFactory.php" afterPath="$PROJECT_DIR$/designPatterns/02_factory/MySystemFactory.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/3_abstract_factory/AbstractFactory.php" afterPath="$PROJECT_DIR$/designPatterns/03_abstract_factory/AbstractFactory.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/4_builder/Product.php" afterPath="$PROJECT_DIR$/designPatterns/04_builder/Product.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/5_Prototye/Prototype.php" afterPath="$PROJECT_DIR$/designPatterns/05_Prototye/Prototype.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/6_adapter/Usb.php" afterPath="$PROJECT_DIR$/designPatterns/06_adapter/Usb.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/7_bridge/common.php" afterPath="$PROJECT_DIR$/designPatterns/07_bridge/common.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/7_bridge/final_info.php" afterPath="$PROJECT_DIR$/designPatterns/07_bridge/final_info.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/7_bridge/info.php" afterPath="$PROJECT_DIR$/designPatterns/07_bridge/info.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/8_component/Component.php" afterPath="$PROJECT_DIR$/designPatterns/08_component/Component.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/9_decorator/decorator.php" afterPath="$PROJECT_DIR$/designPatterns/09_decorator/decorator.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php" afterPath="$PROJECT_DIR$/designPatterns/00_IOC/IOC_Container.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/0_IOC/register_tree.php" afterPath="$PROJECT_DIR$/designPatterns/00_IOC/register_tree.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -210,12 +200,12 @@
       <workItem from="1540534163785" duration="1111000" />
       <workItem from="1540538389864" duration="3832000" />
       <workItem from="1540776648161" duration="18216000" />
-      <workItem from="1540880605394" duration="54858000" />
+      <workItem from="1540880605394" duration="54899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84777000" />
+    <option name="totallyTimeSpent" value="84818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="686" y="121" width="1673" height="1034" extended-state="0" />
@@ -580,7 +570,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/0_IOC/register_tree.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/00_IOC/register_tree.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="47" column="39" lean-forward="false" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
@@ -588,7 +578,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/0_IOC/IOC_Container.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/00_IOC/IOC_Container.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1044">
           <caret line="58" column="17" lean-forward="false" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
