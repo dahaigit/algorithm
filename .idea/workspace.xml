@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf67d670-78a3-4e6f-b23a-9180765b5553" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designPatterns/10_facade/computer_start.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designPatterns/11_proxy/distillery.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designPatterns/12_flyweight/ShareFlyWeight.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designPatterns/13_strategy/SubStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designPatterns/8_component/Component.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designPatterns/9_decorator/decorator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designPatterns/2_factory/MySystemFactory.php" afterPath="$PROJECT_DIR$/designPatterns/2_factory/MySystemFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designPatterns/6_adapter/Usb.php" afterPath="$PROJECT_DIR$/designPatterns/6_adapter/Usb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/1_singleton/FactorySingleton.php" afterPath="$PROJECT_DIR$/designPatterns/01_singleton/FactorySingleton.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/1_singleton/People.php" afterPath="$PROJECT_DIR$/designPatterns/01_singleton/People.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/2_factory/MySystemFactory.php" afterPath="$PROJECT_DIR$/designPatterns/02_factory/MySystemFactory.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/3_abstract_factory/AbstractFactory.php" afterPath="$PROJECT_DIR$/designPatterns/03_abstract_factory/AbstractFactory.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/4_builder/Product.php" afterPath="$PROJECT_DIR$/designPatterns/04_builder/Product.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/5_Prototye/Prototype.php" afterPath="$PROJECT_DIR$/designPatterns/05_Prototye/Prototype.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/6_adapter/Usb.php" afterPath="$PROJECT_DIR$/designPatterns/06_adapter/Usb.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/7_bridge/common.php" afterPath="$PROJECT_DIR$/designPatterns/07_bridge/common.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/7_bridge/final_info.php" afterPath="$PROJECT_DIR$/designPatterns/07_bridge/final_info.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/7_bridge/info.php" afterPath="$PROJECT_DIR$/designPatterns/07_bridge/info.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/8_component/Component.php" afterPath="$PROJECT_DIR$/designPatterns/08_component/Component.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designPatterns/9_decorator/decorator.php" afterPath="$PROJECT_DIR$/designPatterns/09_decorator/decorator.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,7 +71,7 @@
         </entry>
       </file>
       <file leaf-file-name="MySystemFactory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/designPatterns/2_factory/MySystemFactory.php">
+        <entry file="file://$PROJECT_DIR$/designPatterns/02_factory/MySystemFactory.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
               <caret line="44" column="28" lean-forward="false" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
@@ -154,12 +156,6 @@
               <item name="php360" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="designPatterns" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="php360" type="b2602c69:ProjectViewProjectNode" />
-              <item name="php360" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="designPatterns" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="13_strategy" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -214,18 +210,17 @@
       <workItem from="1540534163785" duration="1111000" />
       <workItem from="1540538389864" duration="3832000" />
       <workItem from="1540776648161" duration="18216000" />
-      <workItem from="1540880605394" duration="54501000" />
+      <workItem from="1540880605394" duration="54858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84420000" />
+    <option name="totallyTimeSpent" value="84777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="686" y="121" width="1673" height="1034" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12709238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12709238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -503,7 +498,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/4_builder/Product.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/04_builder/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="814">
           <caret line="71" column="4" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="71" selection-end-column="4" />
@@ -513,7 +508,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/5_Prototye/Prototype.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/05_Prototye/Prototype.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
@@ -531,7 +526,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/1_singleton/FactorySingleton.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/01_singleton/FactorySingleton.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -539,7 +534,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/1_singleton/People.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/01_singleton/People.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="57" column="26" lean-forward="false" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
@@ -549,7 +544,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/7_bridge/info.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/07_bridge/info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
@@ -559,7 +554,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/7_bridge/common.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/07_bridge/common.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="8" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="16" selection-end-column="8" />
@@ -569,7 +564,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/8_component/Component.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/08_component/Component.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="814">
           <caret line="132" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
@@ -577,7 +572,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/7_bridge/final_info.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/07_bridge/final_info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-320">
           <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
@@ -603,7 +598,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/6_adapter/Usb.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/06_adapter/Usb.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-414">
           <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
@@ -621,7 +616,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/9_decorator/decorator.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/09_decorator/decorator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
@@ -631,7 +626,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/3_abstract_factory/AbstractFactory.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/03_abstract_factory/AbstractFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
@@ -639,7 +634,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designPatterns/2_factory/MySystemFactory.php">
+    <entry file="file://$PROJECT_DIR$/designPatterns/02_factory/MySystemFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="44" column="28" lean-forward="false" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
