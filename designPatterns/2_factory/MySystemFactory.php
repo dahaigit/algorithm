@@ -10,7 +10,7 @@
 
 
 /**
- * Factory class[工厂模式]
+ * Factory class[工厂模式]也称简单工厂模式
  * @author ITYangs<ityangs@163.com>
  */
 interface SystemFactory
