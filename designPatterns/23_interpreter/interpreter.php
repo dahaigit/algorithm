@@ -51,6 +51,15 @@ class Interpreter { //解释器
 //client
 $obj = new Interpreter();
 $obj->execute("123s45abc");
+/*一
+二
+三
+S
+四
+五
+A
+B
+C*/
 
 
 
