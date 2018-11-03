@@ -13,7 +13,7 @@ abstract class Language
 {
     public function __construct() {
     }
-    public function say($msg, $type = 1)
+    public function say($msg, $type)
     {
         return Util::translate($msg, $type);
     }
