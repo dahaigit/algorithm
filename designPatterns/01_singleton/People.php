@@ -30,6 +30,7 @@
         中介者模式【Mediator】
         解释器模式【Interpreter】
     https://my.oschina.net/botkenni/blog/1603660
+    http://www.runoob.com/design-pattern/memento-pattern.html
  *
  * */
 
