@@ -1,46 +1,83 @@
 <?php
 /*
- * strategy 结构设计模式 - 策略模式
- * http://www.php.cn/php-weizijiaocheng-396867.html
- * 和工厂模式类似，
- * 1、策略模式是把选择权交给了client端，工厂是封装在工厂里面
- * 2、策略返回的是计算结果，工厂返回的是对象
- * 3、简单理解：普通饭店（工厂：你只用交钱，别人选材和做饭）和自助餐餐厅（策略：自己选材料）
- * 这样就会有更好的拓展性
+ * 接口隔离原则 - 设计模式原则 - discipline
  *
  * */
 
-/**
- * 减价策略接口
- */
-interface SubStrategy
+
+interface OrderForPortal
 {
-    public function SubPrice($price);
+    public function getOrder();
 }
 
-class HighSub implements SubStrategy
+interface OrderForOtherSys
 {
-    public function SubPrice($price) {
-        echo '高级会员：';
-        return 0.7 * $price;
-    }
+    public function getOrder();
+    public function insertOrder();
 }
 
-class Price
+interface OrderForAdmin
 {
-    private $subStrategy;
-
-    public function __construct(SubStrategy $subStrategy) {
-        $this->subStrategy = $subStrategy;
-    }
-
-    public function getRealPrice($price)
-    {
-        echo "原价：" . $price . '<br>';
-        return $this->subStrategy->SubPrice($price);
-    }
+    public function getOrder();
+    public function insertOrder();
+    public function update();
+    public function deleteOrder();
 }
 
-$highSub = new HighSub();
-$price = new Price($highSub);
-echo $price->getRealPrice(100);
+class Order implements OrderForPortal,OrderForOtherSys,OrderForAdmin
+{
+    private function __construct() {
+
+    }
+
+    public static function getProtal(){
+        return (new Self());
+    }
+
+    public static function getOther(){
+        return (new Self());
+    }
+
+    public static function getAdmin(){
+        return (new Self());
+    }
+
+    public function getOrder() {
+        // TODO: Implement getOrder() method.
+    }
+    public function insertOrder() {
+        // TODO: Implement insertOrder() method.
+    }
+    public function update() {
+        // TODO: Implement update() method.
+    }
+    public function deleteOrder() {
+        // TODO: Implement deleteOrder() method.
+    }
+}
+$orders = Order::getProtal();
+
+var_dump($orders);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,3 +13,5 @@ yarn-error.log
 .env
 _ide_helper
 .env.
+.idea/
+.idea/workspace.xml
