@@ -97,6 +97,8 @@ $consistent->addNode('a');
 $consistent->addNode('b');
 $consistent->addNode('c');
 
+
+dd($_SERVER);
 // 查询一下mhl这个key在哪个服务器
 dump($consistent);
 dump($consistent->getNumerical('menghailong'));
