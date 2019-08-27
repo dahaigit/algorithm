@@ -76,10 +76,13 @@ function selectionSort($arr)
                 $minIndex = $j;
             }
         }
-        list($arr[$i], $arr[$minIndex]) = [$arr[$minIndex], $arr[$i]];
+        if ($i != $minIndex) {
+            list($arr[$i], $arr[$minIndex]) = [$arr[$minIndex], $arr[$i]];
+        }
     }
     return $arr;
 }
+var_dump(selectionSort($arr));
 
 /**
  * Notes: 冒泡排序
