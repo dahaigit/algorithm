@@ -9,7 +9,8 @@ function dd(...$args)
 }
 
 /**
- * Notes: 获取比第一个元素大和比第一个元素小的两个数组然后合并3者（两个数组+第一个元素），递归进行（然后分别用这两个数组做同样的操作）。
+ * Notes: 快速排序：获取比第一个元素大和比第一个元素小的两个数组然后合并3者
+ * （两个数组+第一个元素），递归进行（然后分别用这两个数组做同样的操作）。
  * User: mhl
  * method: GET
  * @param $arr
@@ -35,35 +36,11 @@ function quickSort($arr)
     $rightArr = quickSort($rightArr);
     return array_merge($leftArr, [$firstValue], $rightArr);
 }
-var_dump(quickSort($arr));
 
 /**
- * Notes: 希尔排序-比较难理解，暂时放一下
- * User: mhl
- * method: GET
- * @param $arr
- * @return mixed
- */
-function shellSort($arr)
-{
-    $arrCount = count($arr);
-    for ($gap = floor($arrCount/2); $gap>0; $gap=floor($gap/=2)) {
-        for($i=$gap; $i<$arrCount;++$i)
-        {
-            for($j=$i-$gap; $j>=0 && $arr[$j+$gap]<$arr[$j]; $j-=$gap) {
-                $temp = $arr[$j];
-                $arr[$j] = $arr[$j+$gap];
-                $arr[$j+ $gap] = $temp;
-            }
-        }
-    }
-    return $arr;
-}
-//var_dump(shellSort($arr));
-
-
-/**
- * Notes: 每步将一个未排序的元素，按其值大小插入前面已经排序号的数组中的适当位置(拿着当前值和排序好的数组对比，若发现元素比当前值大，则这个元素往后移懂一位)。直到排序完成。
+ * Notes: 插入排序：每步将一个未排序的元素，
+ * 按其值大小插入前面已经排序号的数组中的适当位置(拿着当前值和排序好的数组对比，
+ * 若发现元素比当前值大，则这个元素往后移懂一位)。直到排序完成。
  * User: mhl
  * method: GET
  * @param $arr
@@ -81,7 +58,6 @@ function insertionSort($arr)
         $arr[$preIndex] = $currentValue;
     }
 }
-//var_dump(insertionSort($arr));
 
 /**
  * Notes: 选择排序：
@@ -104,7 +80,6 @@ function selectionSort($arr)
     }
     return $arr;
 }
-//var_dump(selectionSort($arr));
 
 /**
  * Notes: 冒泡排序
