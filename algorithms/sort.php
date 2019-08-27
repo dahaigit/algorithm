@@ -9,6 +9,35 @@ function dd(...$args)
 }
 
 /**
+ * Notes: 获取比第一个元素大和比第一个元素小的两个数组然后合并数组，递归进行（然后分别用这两个数组做同样的操作）。
+ * User: mhl
+ * method: GET
+ * @param $arr
+ * @return array
+ */
+function quickSort($arr)
+{
+    $arrCount = count($arr);
+    if ($arrCount<=1) {
+        return $arr;
+    }
+    $firstValue = $arr[0];
+    $leftArr = [];
+    $rightArr = [];
+    for ($i=1; $i<$arrCount; $i++) {
+        if ($firstValue < $arr[$i]) {
+            $rightArr[] = $arr[$i];
+        } else {
+            $leftArr[] = $arr[$i];
+        }
+    }
+    $leftArr = quickSort($leftArr);
+    $rightArr = quickSort($rightArr);
+    return array_merge($leftArr, [$firstValue], $rightArr);
+}
+var_dump(quickSort($arr));
+
+/**
  * Notes: 希尔排序-比较难理解，暂时放一下
  * User: mhl
  * method: GET
@@ -30,7 +59,7 @@ function shellSort($arr)
     }
     return $arr;
 }
-var_dump(shellSort($arr));
+//var_dump(shellSort($arr));
 
 
 /**
