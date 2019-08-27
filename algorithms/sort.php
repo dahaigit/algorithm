@@ -61,7 +61,7 @@ function insertionSort($arr)
 
 /**
  * Notes: 选择排序：
- * description：以正序为例。每次选择一个最小的元素，放在外层循环的当前位置。
+ * description：以正序为例。每次选择一个最小的元素，最小值和当前位置值互换位置。
  * User: mhl
  * method: GET
  * @param $arr
