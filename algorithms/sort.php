@@ -61,7 +61,9 @@ function insertionSort($arr)
 
 /**
  * Notes: 选择排序：
- * description：以正序为例。每次选择一个最小的元素，最小值和当前位置值互换位置。
+ * description：首先在未排序序列中找到最小元素，存放到排序序列的起始位置。
+ * 然后，再从剩余未排序元素中继续寻找最小元素，然后放到已排序序列的末尾。
+ * 以此类推，直到所有元素均排序完毕。
  * User: mhl
  * method: GET
  * @param $arr
