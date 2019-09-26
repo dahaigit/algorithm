@@ -66,26 +66,34 @@ function selectionSort($arr)
   5 => int 6*/
 
 /**
- * Notes: 插入排序：每步将一个未排序的元素，
- * 按其值大小插入前面已经排序号的数组中的适当位置(拿着当前值和排序好的数组对比，
- * 若发现元素比当前值大，则这个元素往后移懂一位)。直到排序完成。
+ * Notes: 插入排序：
+ * 它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。
+ * 插入排序在实现上，通常采用in-place排序（即只需用到O(1)的额外空间的排序），
+ * 因而在从后向前扫描过程中，需要反复把已排序元素逐步向后挪位，为最新元素提供插入空间。
  * User: mhl
  * method: GET
  * @param $arr
  */
-function insertionSort($arr)
+function insertionSort(array $arr)
 {
     $arrCount = count($arr);
-    for ($i=0; $i< $arrCount-1; $i--) {
-        $currentValue = $arr[$i+1];
-        $preIndex = $i;
-        while ($preIndex>=0 && $currentValue < $arr[$preIndex]) {
-            $arr[$preIndex+1] = $arr[$preIndex];
-            $preIndex--;
-        }
-        $arr[$preIndex] = $currentValue;
+    if ($arrCount == 0 || $arrCount == 1) {
+        return $arr;
     }
+    for ($i = 0; $i< $arrCount; $i++)
+    {
+        $currentValue = $arrCount[$i + 1];
+        $index = $i;
+        while ($index >= 0 && $currentValue < $arr[$index])
+        {
+            $arr[$index + 1] = $arr[$index];
+            $index--;
+        }
+        $arr[$index+1] = $currentValue;
+    }
+    return $arr;
 }
+dd(insertionSort($arr));
 
 /**
  * Notes: 快速排序：获取比第一个元素大和比第一个元素小的两个数组然后合并3者
