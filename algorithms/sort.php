@@ -80,20 +80,20 @@ function insertionSort(array $arr)
     if ($arrCount == 0 || $arrCount == 1) {
         return $arr;
     }
-    for ($i = 0; $i< $arrCount; $i++)
+    for ($i = 0; $i< $arrCount - 1; $i++)
     {
-        $currentValue = $arrCount[$i + 1];
+        $currentValue = $arr[$i + 1];
         $index = $i;
         while ($index >= 0 && $currentValue < $arr[$index])
         {
             $arr[$index + 1] = $arr[$index];
             $index--;
         }
-        $arr[$index+1] = $currentValue;
+        $arr[$index + 1] = $currentValue;
     }
     return $arr;
 }
-dd(insertionSort($arr));
+dd(insertionSort($arr), $arr);
 
 /**
  * Notes: 快速排序：获取比第一个元素大和比第一个元素小的两个数组然后合并3者
