@@ -1,7 +1,7 @@
 <?php
 /*
  *
- * builder 设计模式 - 建造者模式
+ * builder 创建设计模式 - 建造者模式
  *
  * 建造者模式主要在于创建一些复杂的对象。
  * 将一个复杂对象的构造与它的表示分离，
@@ -92,7 +92,7 @@ class ComputerDirector
 $winComputerBuilder = new WinComputerBuilder('微软电脑', 'Inter 7');
 $computerDirector = new ComputerDirector();
 $computerDirector->directorStep($winComputerBuilder);
-// 仔细看，电脑建造者并没有返回对象，只是导演了电脑的步骤而已
+// 仔细看，电脑导演并没有返回对象，只是导演了电脑的建造步骤而已，返回电脑对象的是电脑建构者。
 $winComputer = $winComputerBuilder->getComputer();
 var_dump($winComputer);
 
