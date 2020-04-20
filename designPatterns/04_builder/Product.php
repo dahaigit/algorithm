@@ -11,69 +11,90 @@
  * */
 
 /**
- *
- * 产品本身
+ * 定义一个电脑类
  */
-class Product {
-    private $_parts;
-    public function __construct() { $this->_parts = array(); }
-    public function add($part) { return array_push($this->_parts, $part); }
-}
+class Computer
+{
+    public $brandName = '';
 
-/**
- * 建造者抽象类
- *
- */
-abstract class Builder {
-    public abstract function buildPart1();
-    public abstract function buildPart2();
-    public abstract function getResult();
-}
+    public $cpu = '';
 
-/**
- *
- * 具体建造者
- * 实现其具体方法
- */
-class ConcreteBuilder extends Builder {
-    private $_product;
-    public function __construct() { $this->_product = new Product(); }
-    public function buildPart1() { $this->_product->add("Part1"); }
-    public function buildPart2() { $this->_product->add("Part2"); }
-    public function getResult() { return $this->_product; }
-}
-/**
- *
- *导演者
- */
-class Director {
-    public function __construct(Builder $builder) {
-        $builder->buildPart1();//导演指挥具体建造者生产产品
-        $builder->buildPart2();
+    public function showBrand()
+    {
+        echo "我的品牌是：" . $this->brandName . '我的cpu是' . $this->cpu;
     }
 }
 
+/**
+ * 定义一个抽象的电脑建造者
+ */
+abstract class ComputerBuilder
+{
+    /**
+     * 步骤1
+     */
+    abstract public function step1();
 
-
-
-// client
-$builder = new ConcreteBuilder();
-$director = new Director($builder);
-$product = $builder->getResult();
-echo "<pre>";
-var_dump($product);
-echo "</pre>";
-/*输出： object(Product)#2 (1) {
-["_parts":"Product":private]=>
-array(2) {
-    [0]=>string(5) "Part1"
-    [1]=>string(5) "Part2"
+    /**
+     * 步骤2
+     */
+    abstract public function step2();
+    abstract public function getComputer();
 }
-} */
 
+/**
+ * 定义一个windows电脑建造者
+ */
+class WinComputerBuilder extends ComputerBuilder
+{
+    private $computer = null;
 
+    public function __construct($brandName, $cpuName)
+    {
+        $this->computer = new Computer();
+        $this->computer->brandName = $brandName;
+        $this->computer->cpu = $cpuName;
+    }
 
+    public function step1()
+    {
+        $this->computer->brandName .= 'win7';
+    }
 
+    public function step2()
+    {
+        $this->computer->cpu .= 'win7';
+    }
+
+    public function getComputer()
+    {
+        return $this->computer;
+    }
+}
+
+/**
+ * 定义一个电脑导演，导演记录了电脑的生产流程
+ */
+
+class ComputerDirector
+{
+    /**
+     * 导演了步骤
+     * @param ComputerBuilder $computerBuilder
+     */
+    public function directorStep(ComputerBuilder $computerBuilder)
+    {
+        $computerBuilder->step1();
+        $computerBuilder->step2();
+    }
+}
+
+$winComputerBuilder = new WinComputerBuilder('微软电脑', 'Inter 7');
+$computerDirector = new ComputerDirector();
+$computerDirector->directorStep($winComputerBuilder);
+// 仔细看，电脑建造者并没有返回对象，只是导演了电脑的步骤而已
+$winComputer = $winComputerBuilder->getComputer();
+var_dump($winComputer);
 
 
 
