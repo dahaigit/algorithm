@@ -1,62 +1,98 @@
 <?php
 /*
  *
- * Factory 设计模式 - 抽象工厂模式
+ * Factory 创建设计模式 - 抽象工厂模式
  *
- * 有些情况下我们需要根据不同的选择逻辑提供不同的构造工厂
- * 而对于多个工厂而言需要一个统一的抽象工厂：
+ *1、问题：
+ * QQ一键换皮肤，是怎么实现的。聊天背景，字体颜色等都会改变。
+ *2、解决方案
+ * 我们把聊天背景，字体颜色，作为产品族。然后面向客户的是各种整套皮肤
  *
  * */
 
-class System{}
-class Soft{}
+/**
+ * 定义一个皮肤抽象工厂
+ */
+abstract class SkinAbstractFactory
+{
+    /**
+     * 定义一个创建字体颜色对象的方法
+     */
+    abstract public function createFontColor();
 
-class MacSystem extends System{}
-class MacSoft extends Soft{}
-
-class WinSystem extends System{}
-class WinSoft extends Soft{}
-
+    /**
+     * 定义一个创建背景的对象方法
+     */
+    abstract public function createBack();
+}
 
 /**
- * AbstractFactory class[抽象工厂模式]
- * @author ITYangs<ityangs@163.com>
+ * 定义一个高级皮肤工厂
  */
-interface AbstractFactory {
-    public function CreateSystem();
-    public function CreateSoft();
+class HighSkinFactory extends SkinAbstractFactory
+{
+    public function createBack()
+    {
+        return new Back();
+    }
+
+    public function createFontColor()
+    {
+        return new FontColor(__CLASS__);
+    }
 }
 
-class MacFactory implements AbstractFactory{
-    public function CreateSystem(){ return new MacSystem(); }
-    public function CreateSoft(){ return new MacSoft(); }
+/**
+ * 定义一个低级皮肤工厂
+ */
+class LowSkinFactory extends SkinAbstractFactory
+{
+    public function createBack()
+    {
+        return new Back();
+    }
+
+    public function createFontColor()
+    {
+        return new FontColor(__CLASS__);
+    }
 }
 
-class WinFactory implements AbstractFactory{
-    public function CreateSystem(){ return new WinSystem(); }
-    public function CreateSoft(){ return new WinSoft(); }
+/**
+ * 定义一个字体颜色类
+ */
+class FontColor
+{
+    public $level = null;
+
+    public function __construct($level)
+    {
+        $this->level = $level;
+    }
+
+    public function showColor()
+    {
+        echo "我的颜色级别为："  .  $this->level;
+    }
 }
 
+/**
+ * 定义一个背景类
+ */
+class Back
+{
+    public function showBack()
+    {
+        echo "我是通用背景";
+    }
+}
 
-
-
-
-
-//@test:创建工厂->用该工厂生产对应的对象
-
-//创建MacFactory工厂
-$MacFactory_obj = new MacFactory();
-//用MacFactory工厂分别创建不同对象
-var_dump($MacFactory_obj->CreateSystem());//输出：object(MacSystem)#2 (0) { }
-var_dump($MacFactory_obj->CreateSoft());// 输出：object(MacSoft)#2 (0) { }
-
-
-//创建WinFactory
-$WinFactory_obj = new WinFactory();
-//用WinFactory工厂分别创建不同对象
-var_dump($WinFactory_obj->CreateSystem());//输出：object(WinSystem)#3 (0) { }
-var_dump($WinFactory_obj->CreateSoft());//输出：object(WinSoft)#3 (0) { }
-
+// 我现在需要一套高级时装
+$highSkinFactor = new HighSkinFactory();
+$fontColor = $highSkinFactor->createFontColor();
+$back = $highSkinFactor->createBack();
+$fontColor->showColor();
+$back->showBack();
 
 
 
