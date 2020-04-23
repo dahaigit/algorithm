@@ -69,8 +69,9 @@ class Container
         if ($this->has($abstract)) {
             // 兼容参数为字符串和每次参数的情况
             if (!is_array($parameters) || empty($parameters)) {
-                $parameters = [$this , $parameters];
+                $parameters = [$parameters];
             }
+            array_unshift($parameters, $this);
             return call_user_func_array($this->bindings[$abstract], $parameters);
         } else {
             $this->throwNotFoundService($abstract);
