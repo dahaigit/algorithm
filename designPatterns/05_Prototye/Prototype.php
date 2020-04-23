@@ -11,32 +11,85 @@
  * */
 /**
  *
- * 原型接口
+ * 定义一个原型接口
  *
  */
-interface Prototype { public function copy(); }
+interface Prototype
+{
+    /**
+     * 浅拷贝
+     */
+    public function shallowCopy();
 
-/**
- * 具体实现
- *
- */
-class ConcretePrototype implements Prototype{
-    private  $_name;
-    public function __construct($name) { $this->_name = $name; }
-    public function copy() { return clone $this;}
+    /**
+     * 深拷贝
+     */
+    public function deepCopy();
 }
 
-class Test {}
+class PeoplePrototype implements Prototype
+{
+    private $people = null;
 
-// client
-$object1 = new ConcretePrototype(new Test());
-var_dump($object1);//输出：object(ConcretePrototype)#1 (1) { ["_name":"ConcretePrototype":private]=> object(Test)#2 (0) { } }
-$object2 = $object1->copy();
-var_dump($object2);//输出：object(ConcretePrototype)#3 (1) { ["_name":"ConcretePrototype":private]=> object(Test)#2 (0) { } }
+    public function __construct($people)
+    {
+        $this->people = $people;
+    }
 
+    public function getPeople()
+    {
+        return $this->people;
+    }
 
+    public function shallowCopy()
+    {
+        return clone $this->people;
+    }
 
+    public function deepCopy()
+    {
+        return unserialize(serialize($this->people));
+    }
+}
 
+class People{}
+
+class Attr{}
+
+$people = new People();
+$people->age = 1;
+$people->attr = new Attr();
+$peoplePrototype = new PeoplePrototype($people);
+$people1 = $peoplePrototype->shallowCopy();
+$people2 = $peoplePrototype->deepCopy();
+var_dump($people);
+var_dump($people1);
+var_dump($people2);
+
+// 结果
+/*
+ * object(People)#1 (2) {
+  ["age"]=>
+  int(1)
+  ["attr"]=>
+  object(Attr)#2 (0) {
+  }
+}
+object(People)#4 (2) {
+  ["age"]=>
+  int(1)
+  ["attr"]=>
+  object(Attr)#2 (0) {
+  }
+}
+object(People)#5 (2) {
+  ["age"]=>
+  int(1)
+  ["attr"]=>
+  object(Attr)#6 (0) {
+  }
+}
+ * */
 
 
 
