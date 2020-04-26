@@ -23,7 +23,6 @@ class People
     /**
      * 获取实例
      * @author mhl
-     * @date ${YEAR}-${MONTH}-${DAY} ${TIME}
      */
     public static function getInstance()
     {
@@ -36,7 +35,6 @@ class People
     /**
      * 私有克隆函数，防止克隆
      * @author mhl
-     * @date ${YEAR}-${MONTH}-${DAY} ${TIME}
      */
     private function __clone()
     {
