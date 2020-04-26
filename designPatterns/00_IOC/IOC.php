@@ -67,7 +67,7 @@ class Container
     private function resolve($abstract, $parameters = [])
     {
         if ($this->has($abstract)) {
-            // 兼容参数为字符串和每次参数的情况
+            // 兼容参数为字符串和空数组的情况
             if (!is_array($parameters) || empty($parameters)) {
                 $parameters = [$parameters];
             }
