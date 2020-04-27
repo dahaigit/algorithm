@@ -17,7 +17,7 @@
 前面说明了这23种设计模式的分类，下面是对各个模式的功能进行介绍。
 ## 1）单例（Singleton）模式 - 创建型模式
 某个类只能生成一个实例，该类提供了一个全局访问点，供外部获取该实例，其拓展是有限多个实例。
- [更多](./createType/Singleton.php)
+ [更多](./createType/Singleton.php  target="_blank)
 ## 2）原型（Prototype）模式
 将一个对象作为原型，通过对其进行复制而克隆出多个和原型类似的新实例。
  [更多](./createType/Prototype.php)
