@@ -1,86 +1,67 @@
 <?php
 /*
- *
  * bridge 结构设计模式 - 桥接模式
- * 问题：一开始站内发送消息种类有：发送短信，站内信息，邮箱等，突然有一天消息还有级别的区分：有普通，紧急，加急
+ * 目的：将抽象与实现分离，使它们可以独立变化。它是用组合关系代替继承关系来实现，从而降低 抽象和实现这两个可变维度的耦合度。
+ * 主要角色：
+ * 1）抽象(Abstraction)该类持有一个对“实现”角色的引用，抽象角色中的方法需要 “实现” 角色来实现。抽象角色一般为抽象类
+ * 2）修正抽象(Refined Abstraction)抽象的具体实现，对抽象的方法进行完善和扩展
+ * 3）实现(Implementer)定义“实现”维度的基本操作，提供给“抽象”使用。该类一般为接口或抽象类
+ * 4）具体实现(Concrete Implementer) “实现”接口的具体实现
  *
- * 一个抽象产生多种具体的实现方式，单纯的通过子类继承会有子类爆炸（过多的子类产生）的现象，系统需要它们之间进行动态耦合。
- *
- * 1、我们需要抽象一个info（消息类）类，里面有一个抽象的发送方法send
- * 2、分别用站内信息和邮箱继承消息类，并实现发送方法
- * 3、定义级别接口，里面有一个没有实现的方法sayLevel
- * 4、分别用普通级别，紧急级别类实现级别接口
- * 5、调用：new一个站内信息对象，把级别对象传进去，然后调用发送方法send
- * https://blog.csdn.net/chenmoimg_/article/details/65633211
- *
+ * 案例：用桥接模式，实现大杯小杯，有糖无糖的奶茶。
  * */
 
-/*
- * 桥接模式实现
- * 抽象一个发信息的抽象类
- *
- * */
-abstract class Info
+/**
+ * 定义一个奶茶的抽象
+ */
+abstract class MilkyTeaAbstract
 {
-    public $level;
-    public function __construct(InfoLevel $infoLevel) {
-        $this->level = $infoLevel;
+    // 添加什么
+    protected $addWhatObj;
+
+    /**
+     *  把甜度注入到奶茶的抽象类中
+     * @param AddWhatImplementer $addWhatImplementer
+     */
+    public function __construct(AddWhatImplementer $addWhatImplementer)
+    {
+        $this->addWhatObj = $addWhatImplementer;
     }
 
-    abstract public function send($to, $content);
+    /**
+     * 定义一个制作奶茶的方法
+     */
+    abstract function make();
 }
 
 /**
- * 站内信息
+ * 定义一个添加什么的接口（实现者接口）
  */
-class Zn extends Info
+interface AddWhatImplementer
 {
-    public function send($to, $content) {
-        echo '站内信息：' . $to . $content . $this->level->sayLevel();
-    }
+    public function add();
 }
 
-/*
- * 邮箱
- * */
-class Email extends Info
+class HaveSugar implements AddWhatImplementer
 {
-    public function send($to, $content) {
-        echo '邮箱：' . $to . $content . $this->level->sayLevel();
+    public function add()
+    {
+        return '加糖';
     }
 }
 
 /**
- * 定义消息级别
- * Interface InfoLevel
+ * 定义一个小杯奶茶类
  */
-interface InfoLevel
+class LittleMilkyTea extends MilkyTeaAbstract
 {
-    public function sayLevel();
-}
-
-/*
- * 普通级别
- * */
-class commonLevel implements InfoLevel
-{
-    public function sayLevel() {
-        return '-普通级别';
+    public function make()
+    {
+        return '小杯' . $this->addWhatObj->add();
     }
 }
 
-/*
- * 紧急级别
- * */
-class warnLevel implements InfoLevel
-{
-    public function sayLevel() {
-        return '-紧急级别';
-    }
-}
-
-$zn = new Zn(new commonLevel());
-$zn->send('张三', '生日快乐'); // 站内信息：张三生日快乐-普通级别
-
-$email = new Email(new warnLevel());
-$email->send('张三', '生日快乐'); // 邮箱：张三生日快乐-紧急级别
+// 现在我需要一个小杯加糖奶茶
+$haveSugar = new HaveSugar();
+$littleMilkyTea = new LittleMilkyTea($haveSugar);
+echo $littleMilkyTea->make();
